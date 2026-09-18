@@ -114,4 +114,12 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public boolean equalPhone() {
+        int i = 0;
+        boolean result = false;
+        while (!result){
+            result = searchIndexPhone(contacts[i].getPhone()) != -1;
+        }
+        return result;
+    }
 }

@@ -62,7 +62,7 @@ public class Main {
                     getName(in, cBook);
                     break;
                 case EQUAL_PHONE:
-                    equalPhone(in, cBook);
+                    equalPhone(cBook);
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
@@ -75,8 +75,11 @@ public class Main {
         in.close();
     }
 
-    private static void equalPhone(Scanner in, ContactBook cBook) {
-
+    private static void equalPhone(ContactBook cBook) {
+        if (cBook.equalPhone())
+            System.out.println(SHARE_PHONE);
+        else
+            System.out.println(NOT_SHARE_PHONE);
     }
 
     private static void getName(Scanner in, ContactBook cBook) {
