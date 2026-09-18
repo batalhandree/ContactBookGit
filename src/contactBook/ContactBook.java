@@ -116,11 +116,12 @@ public class ContactBook {
 
     public boolean equalPhone() {
         int i = 0;
-        boolean result = false;
-        while (!result && i < counter){
-            result = searchIndexPhone(contacts[i].getPhone()) == -1;
+        boolean found = false;
+        while (!found && i < counter){
+            int j = searchIndexPhone(contacts[i].getPhone());
+            found = j != -1 && j != i;
             i++;
         }
-        return result;
+        return found;
     }
 }
