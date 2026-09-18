@@ -117,7 +117,7 @@ public class ContactBook {
     public boolean equalPhone() {
         int i = 0;
         boolean result = false;
-        while (!result){
+        while (!result && i < counter){
             result = searchIndexPhone(contacts[i].getPhone()) != -1;
         }
         return result;
