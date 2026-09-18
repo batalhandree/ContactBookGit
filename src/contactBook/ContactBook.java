@@ -118,7 +118,8 @@ public class ContactBook {
         int i = 0;
         boolean result = false;
         while (!result && i < counter){
-            result = searchIndexPhone(contacts[i].getPhone()) != -1;
+            result = searchIndexPhone(contacts[i].getPhone()) == -1;
+            i++;
         }
         return result;
     }
