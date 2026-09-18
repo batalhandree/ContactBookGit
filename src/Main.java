@@ -75,8 +75,19 @@ public class Main {
         in.close();
     }
 
-    private static void getName(Scanner in, ContactBook cBook) {
+    private static void equalPhone(Scanner in, ContactBook cBook) {
 
+    }
+
+    private static void getName(Scanner in, ContactBook cBook) {
+        int phone = in.nextInt();
+        in.nextLine();
+        if (!cBook.hasPhone(phone)) {
+            System.out.println(PHONE_NOT_EXIST);
+        }
+        else {
+            System.out.println(cBook.getName(phone));
+        }
     }
 
     private static String getCommand(Scanner in) {
